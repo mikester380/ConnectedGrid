@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    margin-top: 100vh;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: auto;
+}
+
+.grid-item {
+    grid-column: var(--col) / span var(--span);
+    grid-row: var(--row);
+}
+
+.grid-item__img-wrap {
+    overflow: hidden;
+}
+
+.grid-item__img {
+    width: 100%;
+    display: block;
+}
